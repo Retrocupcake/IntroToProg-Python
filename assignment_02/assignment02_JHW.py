@@ -10,7 +10,7 @@ COURSE_NAME: str = 'Python 100'
 COURSE_PRICE: float = 999.98
 STATE_TAX: float = .09
 TOTAL_PRICE: float = COURSE_PRICE + COURSE_PRICE * STATE_TAX
-FILE_NAME: str = 'Enrollments.csv'
+FILE_NAME: str = '../Assignments/Enrollments.csv'
 
 # Variables
 student_first_name: str = ''

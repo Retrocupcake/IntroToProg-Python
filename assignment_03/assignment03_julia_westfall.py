@@ -19,7 +19,7 @@ Select from the following menu:
 4. Exit the program 
 ------------------------------'''
 
-FILE_NAME: str = 'Enrollments.csv'
+FILE_NAME: str = '../Assignments/Enrollments.csv'
 
 # Define the Data Variables
 student_first_name: str = ''
