@@ -26,10 +26,8 @@ FILE_NAME: str = "Enrollments.json"
 students: list = []  # a table of student data
 menu_choice: str  # Hold the choice made by the user.
 
-
 class Person:
-    """
-
+    """ This is the person class
 
     """
     def __init__(self,
@@ -44,18 +42,22 @@ class Person:
             raise TypeError('First Name and Last Name must be strings')
 
     def get_first_name(self):
+        """ Allows us to get the first name"""
         return self._first_name
 
     def get_last_name(self):
+        """ Allows us to get the last name"""
         return self._last_name
 
     def set_first_name(self, first_name):
+        """ Allows us to set the first name"""
         if isinstance(first_name, str):
             self._first_name = first_name
         else:
             raise TypeError('first_name must be a string.')
 
     def set_last_name(self, last_name):
+        """ Allows us to set the last name"""
         if isinstance(last_name, str):
             self._last_name = last_name
         else:
@@ -66,14 +68,14 @@ class Person:
 
 
 class Student(Person):
-    """
-
-
+    """ This is a student class which inherits attributes from Person object
     """
     def __init__(self,
                  first_name: str = '',
                  last_name: str = '',
                  course_name: str = ''):
+        """ Super allows to take attributes from Person object
+        """
         super().__init__(first_name, last_name)
 
         if isinstance(course_name, str):

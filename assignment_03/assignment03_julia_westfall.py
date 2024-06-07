@@ -7,8 +7,8 @@
 # ------------------------------------------------------------------------------------------ #
 
 # These statements should allow us to use "if" statements and "exit"
-from _ast import If
-import sys
+from sys import exit
+
 
 # Define the Data Constants
 MENU: str = '''----Course Registration Program----
@@ -28,12 +28,10 @@ course_name: str = ''
 csv_data: str = ''
 file_obj = None
 menu_choice: str = ''
-program_continue: bool = True
 
-# Present the menu of choices
-print(MENU)
-
-while program_continue == True:
+while True:
+    # Present the menu of choices
+    print(MENU)
     menu_choice: str = input('Please select an option from the menu: ')
 
     # Input user data
@@ -63,7 +61,7 @@ while program_continue == True:
 
     # Stop the loop
     elif menu_choice == '4':
-        program_continue = False
+        exit()
 
     else:
         print('That value is not an option. Please enter 1,2,3, or 4')
