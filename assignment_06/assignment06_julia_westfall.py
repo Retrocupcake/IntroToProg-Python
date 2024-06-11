@@ -6,6 +6,7 @@
 # Julia Westfall,05/20/24, edited the script from assignment05_julia_westfall
 # ------------------------------------------------------------------------------------------ #
 
+
 # These statements should allow us to use "exit"
 from sys import exit
 import json
