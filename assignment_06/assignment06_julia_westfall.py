@@ -1,9 +1,9 @@
 # ------------------------------------------------------------------------------------------ #
 # Title: assignment05
-# Desc: This assignment demonstrates similar features as assignment 4. It shows dictionaries and Error Handling,too.
+# Desc: This assignment demonstrates similar features as assignment 5 but is more complex.
 # Change Log: (Who, When, What)
 # RRoot,1/1/2030,Created Script
-# Julia Westfall,05/20/24, edited the script from assignment04_julia_westfall
+# Julia Westfall,05/20/24, edited the script from assignment05_julia_westfall
 # ------------------------------------------------------------------------------------------ #
 
 # These statements should allow us to use "exit"
@@ -32,17 +32,23 @@ students: list = []
 
 
 def output_error_messages(message: str, error: Exception = None):
+    """
+This function displays custom error messages to the user
+
+    :param message:
+    :param error:
+    :return:
+    """
     print(message)
     print(error)
 
 
 class FileProcessor:
-    """
-
-    """
     @staticmethod
     def read_data_from_file(file_name: str, student_data: list) -> list:
         """
+  this function reads data from a json file and loads it into a list of Student objects
+
 
         :param file_name:
         :param student_data:
@@ -73,6 +79,12 @@ class FileProcessor:
 
     @staticmethod
     def write_data_to_file(file_name: str, student_data: list) -> None:
+        """This function writes data to a json file with data f
+
+        :param file_name:
+        :param student_data:
+        :return:
+        """
         try:
             file = open(file_name, 'w')
             json.dump(student_data, file)
@@ -84,12 +96,13 @@ class FileProcessor:
 
 class IO:
     """
-
+ collection of presentation layer functions that manage user input and output
     """
+
     @staticmethod
     def input_student_data(students: list):
         """
-
+his function gets the student's first name and last name, with a course name from the user
         :param students:
         :return:
         """
